@@ -15,9 +15,14 @@ const app = express();
 
 // Enable CORS – allow the Vite dev server by default; extend the list for
 // staging / production origins as needed.
+
 app.use(
   cors({
-    origin: ["http://localhost:5173"],
+    origin: [
+      "http://localhost:5173",
+      "https://shecan-community-wall.vercel.app",  // ← your Vercel URL
+      /\.vercel\.app$/,  // ← allows all Vercel preview URLs
+    ],
     methods: ["GET", "POST", "PATCH"],
     credentials: true,
   })
