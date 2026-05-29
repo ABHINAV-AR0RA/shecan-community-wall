@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'https://shecan-api.onrender.com/api', 
+  baseURL: 'https://shecan-api.onrender.com/api/messages', 
   headers: {
     'Content-Type': 'application/json',
   },
